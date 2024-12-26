@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phân Loại Dữ Liệu</title>
+  </head>
+  <body>
+    <h2>Ứng Dụng Phân Loại Dữ Liệu</h2>
+
+    <!-- Form nhập dữ liệu -->
+    <form action="/predict" method="post">
+      <label for="BMI">BMI:</label><br />
+      <input type="number" step="any" name="BMI" required /><br /><br />
+
+      <label for="FamilyHistoryKidneyDisease">FamilyHistoryKidneyDisease:</label><br />
+      <input
+        type="number"
+        step="any"
+        name="FamilyHistoryKidneyDisease"
+        required
+      /><br /><br />
+
+      <label for="SystolicBP">SystolicBP:</label><br />
+      <input type="number" step="any" name="SystolicBP" required /><br /><br />
+
+      <label for="FastingBloodSugar">Feature 3:</label><br />
+      <input
+        type="number"
+        step="any"
+        name="FastingBloodSugar"
+        required
+      /><br /><br />
+
+      <label for="HbA1c">HbA1c:</label><br />
+      <input type="number" step="any" name="HbA1c" required /><br /><br />
+
+      <label for="SerumCreatinine">Feature 3:</label><br />
+      <input
+        type="number"
+        step="any"
+        name="SerumCreatinine"
+        required
+      /><br /><br />
+
+      <label for="BUNLevels">BUNLevels:</label><br />
+      <input type="number" step="any" name="BUNLevels" required /><br /><br />
+
+      <label for="GFR">GFR:</label><br />
+      <input type="number" step="any" name="GFR" required /><br /><br />
+
+      <label for="ProteinInUrine">Feature 3:</label><br />
+      <input
+        type="number"
+        step="any"
+        name="ProteinInUrine"
+        required
+      /><br /><br />
+
+      <label for="Edema">Edema:</label><br />
+      <input type="number" step="any" name="Edema" required /><br /><br />
+
+      <label for="MuscleCramps">Feature 3:</label><br />
+      <input
+        type="number"
+        step="any"
+        name="MuscleCramps"
+        required
+      /><br /><br />
+
+      <label for="Itching">Itching:</label><br />
+      <input type="number" step="any" name="Itching" required /><br /><br />
+
+      <input type="submit" value="Dự đoán" />
+    </form>
+
+    <!-- Kết quả -->
+    {% if prediction_text %}
+    <h3>{{ prediction_text }}</h3>
+    {% endif %}
+  </body>
+</html>
